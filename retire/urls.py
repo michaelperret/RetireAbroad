@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
-
 from django.contrib import admin
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -8,10 +8,13 @@ urlpatterns = patterns('',
     # url(r'^$', 'retire.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    #pages
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'retire_app.views.landing', name='landing'),
     url(r'^search/$', 'retire_app.views.search', name='search'),
-    url(r'^register/$', 'retire_app.views.register', name='register')
+    url(r'^register/$', 'retire_app.views.register', name='register'),
 
+    #login
+    (r'^accounts/', include('registration.backends.default.urls')),
 
 )

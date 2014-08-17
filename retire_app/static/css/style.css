@@ -74,7 +74,7 @@ table, tr, td {
 }
 
 /* Modal styles */
-#login, #register, #search {
+#login_modal, #register_modal, #search {
     font-family: 'Raleway', sans-serif;
     font-size:30px;
 }
@@ -114,4 +114,27 @@ li {
 
 .modal-footer {
     font-size: 30px;
+}
+
+#cool_guy {
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+}
+
+form {
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+}
+span {
+    font-size:30px;
+    font-family: 'Raleway', sans-serif;
+    width:200px;
+    font-weight:lighter;
+}
+
+.modal-title {
+    font-size:30px;
+    font-family: 'Raleway', sans-serif;
 }

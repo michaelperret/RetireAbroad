@@ -20,4 +20,17 @@ def register(request):
         'form': form})
 
 def search(request):
+
+    # #getting "no such file or directory: 'data.csv'
+    # with open('data.csv', 'rb') as csvfile:
+    #     data_reader = csv.reader(csvfile, delimiter='')
+    #     data_list = []
+    #     for row in data_reader:
+    #         print ', '.join(row)
+    #         data_list.append(row)
+    # data = {'data':data_list}
+
     return render(request, 'search.html')
+
+
+
