@@ -1,0 +1,117 @@
+/*{#    adds the following fonts to your site:#}*/
+/*{#    font-family: 'Alegreya Sans SC', sans-serif;#}*/
+/*{#    font-family: 'Lato', sans-serif;#}*/
+/*{#    font-family: 'Josefin Sans', sans-serif;#}*/
+/*{#    font-family: 'Raleway', sans-serif;#}*/
+
+
+#title h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.button-xlarge {
+       font-size: 200%;
+       font-family: 'Raleway', sans-serif;
+       border-radius: 25px;
+       border:5;
+        }
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+a {
+    font-weight:bold;
+    text-decoration: none;
+}
+
+img {
+    height:200px;
+    width:200px;
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    align-content: center;
+}
+
+#title {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.button-secondary {
+    background: rgb(66, 184, 221); /* this is a light blue */
+        }
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    width:50%;
+}
+
+table, tr, td {
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Modal styles */
+#login, #register, #search {
+    font-family: 'Raleway', sans-serif;
+    font-size:30px;
+}
+
+.picture {
+    background-color: #eeeeee;
+    height: 700px;
+    width: 900px;
+    background-image: url('http://31.media.tumblr.com/d851e225242e4d90baada35ba4d996f5/tumblr_n7yif13ZKl1st5lhmo1_1280.jpg');
+    display: inline-block;
+}
+
+li {
+    font-size: 30px;
+    width:300px;
+}
+
+.button {
+    width:300px;
+
+}
+
+.survey_button {
+    font-size:30px;
+}
+
+.option {
+    font-family: 'Raleway', sans-serif;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.4285
+    color: #333;
+    white-space: nowrap;
+}
+
+.modal-footer {
+    font-size: 30px;
+}

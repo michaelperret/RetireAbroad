@@ -1,0 +1,173 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>RA</title>
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <script type="text/javascript" src="static/js/script.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+
+{# the following fonts were added from google's font family'#}
+{#    adds the following fonts to your site:#}
+{#    font-family: 'Alegreya Sans SC', sans-serif;#}
+{#    font-family: 'Lato', sans-serif;#}
+{#    font-family: 'Josefin Sans', sans-serif;#}
+{#    font-family: 'Raleway', sans-serif;#}
+
+</head>
+
+<body>
+
+<br>
+<br>
+<br>
+
+    <center>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="picture">
+                    <div id="title">
+                        <br><br>
+                        <h1>retire-abroad.com</h1>
+                        <br><br><br><br><br>
+                        <br><br><br><br><br>
+                                <button type="button" class="button-xlarge pure-button" id="login" data-toggle="modal" data-target="#search">Search now!</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div id="wrapper">
+            <a id="register" data-toggle="modal" data-target="#register">Register &nbsp;| &nbsp;</a>
+            <a id="login" data-toggle="modal" data-target="#register"> Login</a>
+{#        <button type="button" class="button-xlarge pure-button" id="login" data-toggle="modal" data-target="#register">Register</button>#}
+{#        <button type="button" class="button-xlarge pure-button" id="login" data-toggle="modal" data-target="#login">Log-In</button>#}
+        </div>
+
+       <br>
+       <br>
+
+
+
+{#<--login modal---->#}
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">LOGIN</h4>
+          </div>
+          <div class="modal-body">
+            <h1>Username: </h1> <input type="text" name="username" style = "font-size: 30px"><br>
+            <h1>Password: </h1> <input type="text" name="password" style = "font-size: 30px"><br>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{#<--register modal---->#}
+
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">REGISTER</h4>
+      </div>
+      <div class="modal-body">
+        <h1>Username: </h1> <input type="text" name="username" style = "font-size: 30px">
+        <h1>Email: </h1> <input type="text" name="email" style = "font-size: 30px">
+        <h1>Password: </h1> <input type="password" name="password" style = "font-size: 30px"><br>
+        <h1>Password: </h1> <input type="password" name="password2" style = "font-size: 30px"><br>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{#<--search modal---->#}
+
+<div class="modal fade" id="search" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h1 class="modal-title" id="myModalLabel">Search!</h1>
+      </div>
+
+        <div class="modal-body">
+
+
+{#<!---variables to get are below ----!>#}
+
+          <p>Approximate income / yr:</p>
+             <select id = "incomeStuff" class="form-control" style="font-size: 30px; width:400px; height:70px; ">
+                <option value="1">$10 - 20K</option>
+                <option value="2">$20 - 40K</option>
+                <option value="3">$40 - 60K</option>
+                <option value="4">$80 - 100K</option>
+                <option value="5">$100K+</option>
+            </select>
+
+          <br>
+
+          <p>Climate:</p>
+             <select class="form-control" style="font-size: 30px; width:400px; height:70px; ">
+                <option value="warm">Warm</option>
+                <option value="moderate">Moderate</option>
+                <option value="cool">Cool</option>
+            </select>
+
+           <br>
+
+          <p>Internet speed:</p>
+             <select class="form-control" style="font-size: 30px; width:400px; height:70px; ">
+                <option value="critical">Mission critical</option>
+                <option value="recreational">Recreational</option>
+                <option value="who_cares">Who cares?</option>
+            </select>
+
+            <br>
+
+ {#<!---variables to get are above ----!>#}
+
+      <div class="modal-footer">
+
+        <form action = "search.html" method = "get">
+
+        </form>
+        <button type="button" class="btn btn-default survey_button" data-dismiss="modal">Close</button>
+        <button type="button" id="searchButtonBlah" onclick="bleh();" class="btn btn-primary survey_button">Search</button>
+{#          onclick = "location.href='search';"#}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    </center>
+
+
+</body>
+</html>
