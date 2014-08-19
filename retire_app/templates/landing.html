@@ -7,15 +7,15 @@
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
     <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
     <script type="text/javascript" src="static/js/script.js"></script>
     <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
-
 
 {# the following fonts were added from google's font family'#}
 {#    adds the following fonts to your site:#}
@@ -42,8 +42,8 @@
                         <br><br><br><br><br>
                         <br><br><br>
 
-                        <button type="button" class="button-xlarge pure-button" id="login" data-toggle="modal" data-target="#search">
-                        <span class="glyphicon glyphicon-ok-circle"><br>search!</span>
+                        <button id = "search_button" type="button" class="button-xlarge pure-button" data-toggle="modal" data-target="#search">
+                        search!
                         </button>
 
                     </div>
@@ -64,11 +64,8 @@
 
         </div>
 
-</button>
+        <center>
 
-
-       <br>
-       <br>
 
 <!-- Register Modal -->
 <div class="modal fade" id="register_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -82,26 +79,24 @@
 
           <form action="/your-name/" method="post">
 
-                <label for="your_name">Username: </label>
+                <label for="your_name">Username: </label><br>
                 <input id="your_name" type="text" name="your_name" value="John Doe">
 
                 <br>
 
-                <label for="your_name">Email: </label>
+                <label for="your_name">Email: </label><br>
                 <input id="your_name" type="text" name="your_name" value="John.Doe@gmail.comm">
 
                 <br>
 
-                <label for="your_name">Password: </label>
+                <label for="your_name">Password: </label><br>
                 <input id="your_name" type="password" name="your_name" value="{{ password }}">
 
                 <br>
 
-                <label for="your_name">Password (again): </label>
+                <label for="your_name">Password (again): </label><br>
                 <input id="your_name" type="password" name="your_name" value="{{ password }}">
 
-
-{#                <input type="submit" value="OK">#}
           </form>
       </div>
       <div class="modal-footer">
@@ -124,13 +119,13 @@
       <div class="modal-body">
 
           <form action="/your-name/" method="post">
-                <label for="your_name">Email: </label>
+                <label for="your_name">Email: </label><br>
                 <input id="your_name" type="text" name="your_name" value="John Doe">
                 <br>
 
-                <label for="your_name">Password: </label>
+                <label for="your_name">Password: </label><br>
                 <input id="your_name" type="password" name="your_name" value="{{ password }}">
-{#                <input type="submit" value="OK">#}
+
           </form>
       </div>
       <div class="modal-footer">
@@ -140,9 +135,6 @@
     </div>
   </div>
 </div>
-
-
-
 
 {#<--search modal---->#}
 
@@ -158,7 +150,7 @@
         <div class="modal-body">
 
 
-{#<!---variables to get are below ----!>#}
+{#<!---variables to get below ----!>#}
 
           <p>Approximate income / yr:</p>
              <select id = "incomeStuff" class="form-control" style="font-size: 30px; width:400px; height:70px; ">
@@ -172,7 +164,7 @@
           <br>
 
           <p>Climate:</p>
-             <select class="form-control" style="font-size: 30px; width:400px; height:70px; ">
+             <select id="climateStuff" class="form-control" style="font-size: 30px; width:400px; height:70px; ">
                 <option value="warm">Warm</option>
                 <option value="moderate">Moderate</option>
                 <option value="cool">Cool</option>
@@ -181,7 +173,7 @@
            <br>
 
           <p>Internet speed:</p>
-             <select class="form-control" style="font-size: 30px; width:400px; height:70px; ">
+             <select id="internetStuff" class="form-control" style="font-size: 30px; width:400px; height:70px; ">
                 <option value="critical">Mission critical</option>
                 <option value="recreational">Recreational</option>
                 <option value="who_cares">Who cares?</option>
@@ -189,36 +181,32 @@
 
             <br>
 
- {#<!---variables to get are above ----!>#}
-
       <div class="modal-footer">
 
         <form action = "search.html" method = "get">
 
         </form>
         <button type="button" class="btn btn-default survey_button" data-dismiss="modal">Close</button>
-        <button type="button" id="searchButtonBlah" onclick="bleh();" class="btn btn-primary survey_button">Search</button>
-{#          onclick = "location.href='search';"#}
+        <button type="button" id="searchButtonBlah" onclick="actually_filter_the_cities();" class="btn btn-primary survey_button" data-dismiss="modal">Search</button>
+
       </div>
 
     </div>
-  </div>
+
 </div>
-
-
 
 {#<!---------------------!>#}
 
+</div>
+    </div>
 
 
-
-
-
-
-
-
+            </center>
+        </center>
+    <center>
+    <table style="position: relative; text-align: center;">
+        <tbody id="search_results_table" style="text-align: center; position: absolute"></tbody>
+    </table>
     </center>
-
-
 </body>
 </html>

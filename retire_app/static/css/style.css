@@ -19,7 +19,18 @@
        font-family: 'Raleway', sans-serif;
        border-radius: 25px;
        border:5;
+       background: transparent;
+       border: none;
         }
+
+#search_button {
+    opacity: 0.7;
+    border-width:0.5;
+    border-style:solid;
+    font-size: 300%;
+    font-family: 'Raleway', sans-serif;
+}
+
 
 h2 {
     font-family: 'Raleway', sans-serif;
@@ -66,17 +77,19 @@ hr {
     width:50%;
 }
 
+
 table, tr, td {
     margin-left:auto;
     margin-right:auto;
-    width: 50%;
+    width: 100%;
     font-family: 'Raleway', sans-serif;
+    font-size: 30px;
 }
 
 /* Modal styles */
 #login_modal, #register_modal, #search {
     font-family: 'Raleway', sans-serif;
-    font-size:30px;
+    font-size:20px;
 }
 
 .picture {
@@ -88,17 +101,23 @@ table, tr, td {
 }
 
 li {
-    font-size: 30px;
+    font-size: 20px;
     width:300px;
 }
 
 .button {
-    width:300px;
+    width:200px;
 
 }
 
 .survey_button {
     font-size:30px;
+}
+
+#login {
+    opacity:0.6;
+    font-family: 'Raleway', sans-serif;
+
 }
 
 .option {
@@ -116,12 +135,6 @@ li {
     font-size: 30px;
 }
 
-#cool_guy {
-    margin-left:auto;
-    margin-right:auto;
-    width: 50%;
-}
-
 form {
     margin-left:auto;
     margin-right:auto;
@@ -137,4 +150,13 @@ span {
 .modal-title {
     font-size:30px;
     font-family: 'Raleway', sans-serif;
+}
+
+body {
+    font-size:30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#results {
+    display:none;
 }

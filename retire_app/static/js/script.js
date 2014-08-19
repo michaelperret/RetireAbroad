@@ -3547,7 +3547,7 @@ var data = {
          "globalPeaceIndex":null,
          "wifiAvailability":"4",
          "coffeePlaceWithWifiDensity":"3",
-         "friendlyToForeigners":"super awesome",
+         "friendlyToForeigners":"5",
          "localEnglishSpeaking":"5",
          "nomadExpertTwitter":"",
          "qualityOfNightlife":"4",
@@ -5532,23 +5532,6 @@ var data = {
 //
 //------------------------------------------------------------------------------------------------------------
 
-var filter_cost = function(cutoff_cost){
-    cost_list = data;
-    console.log(data);
-    list_length = cost_list.length;
-    for(var i = 0; i < list_length; i++){
-        curr_city = cost_list[i];
-//        console.log(curr_city);
-        console.log(curr_city.name);
-        if(curr_city.nomadCost.usd <= filter_value){
-            acceptable.push(curr_city.name);
-//                console.log(curr_city.name + " <----------- ADDED to list");
-        }
-    }
-//    console.log("WOO");
-//    console.log(acceptable);
-    return acceptable;
-}
 
 var list = data.cities;
 var filter_wifi_value = 5;
@@ -5556,6 +5539,26 @@ var wifi = "wifiAvailability";
 var temp = "temperature.f";
 var winners = [];
 var acceptable = [];
+
+
+var filter_cost = function(cutoff_cost){
+    cost_list = data.cities;
+//    console.log(cost_list);
+    list_length = cost_list.length;
+    for(var i = 0; i < list_length; i++){
+        curr_city = cost_list[i];
+//        console.log(curr_city);
+//        console.log(curr_city.name);
+//        console.log(curr_city.nomadCost.USD)
+        if(curr_city.nomadCost.USD <= cutoff_cost){
+            acceptable.push(curr_city);
+//                console.log(curr_city.name + " <----------- ADDED to list");
+        }
+    }
+//    console.log("WOO");
+//    console.log(acceptable);
+    return acceptable;
+}
 
 var curr_city;
 var filter = function(list, filter_identifier, filter_value){
@@ -5619,7 +5622,9 @@ var city_count = function(stuff_to_filter, acceptable_params_not_met){
 //city_count(acceptable, 0);
 //console.log(winners.length + "<------------ FINAL LIST LENGTH");
 
-var bleh =  function(){
+var actually_filter_the_cities =  function(){
+    $("#search_results_table").html("");
+    var searchName;
     var max_value_mappings = {
         1:"1263",
         2:"1724",
@@ -5628,15 +5633,43 @@ var bleh =  function(){
         5:"6167"
     };
 
-    var e = document.getElementById("incomeStuff");
+    var climate_mappings = {
+        cold:"60",
+        moderate:'80',
+        hot:'180'
+    };
 
-    var strUser = e.options[e.selectedIndex].value;
-//    console.log(e.selectedIndex);
-//    console.log(e.options[e.selectedIndex]);
+    var internet_mappings = {
+        critical:"40",
+        recreational:'20',
+        who_cares:'1'
+    };
 
-//    console.log(strUser);
-    var vall = max_value_mappings[strUser];
+    var income = document.getElementById("incomeStuff");
+    var strUser = income.options[income.selectedIndex].value;
+    var income_value = max_value_mappings[strUser];
 
-    console.log(filter_cost(vall))
-//    console.log(acceptable);
+    var climate = document.getElementById("climateStuff");
+    var strClim = climate.options[climate.selectedIndex].value;
+    var climate_value = climate_mappings[strClim];
+
+    var internet = document.getElementById("internetStuff");
+    var strInternet = internet.options[internet.selectedIndex].value;
+    var internet_value = internet_mappings[strInternet];
+
+    searchResults = filter_cost(income_value);
+
+//    $("body").append("<div id='poo'><center><tbody>");
+
+    for(var i = 0; i < searchResults.length; i++) {
+        searchName = searchResults[i].name.replace(",","").replace(" ","-");
+        $("#search_results_table").append("<tr><td><a target=blank href=https://www.airbnb.com/s/" + searchName + ">"
+            +searchResults[i].name+"</td><td>"+searchResults[i].internetSpeed+"</td><td>"+searchResults[i].friendlyToForeigners+"</td></tr>");
+    };
+
+//    $("body").append("</tbody></center></div>");
+
+//    filtered_results = filter_cost(income_value);
+//    $("#results").JSON.stringify(filtered_results);
+
 };
