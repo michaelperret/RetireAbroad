@@ -5569,10 +5569,10 @@ var filter = function(list, filter_identifier, filter_value){
     for(var i = 0; i < list_length; i++){
         curr_city = list[i];
 //        console.log(curr_city);
-        console.log(cost);
+//        console.log(cost);
 
         if(curr_city[filter_identifier] >= filter_value){
-            acceptable.push(curr_city.name);
+            acceptable.push(curr_city);
 //                console.log(curr_city.name + " <----------- ADDED to list");
         }
     }
@@ -5595,11 +5595,11 @@ var city_count = function(stuff_to_filter, acceptable_params_not_met){
     var count = 0;
     for (var i = 0; i < stuff_to_filter.length; i++) {
         if (stuff_to_filter[i] != current) {
-            current = stuff_to_filter[i];
+            current = stuff_to_filter[i].name;
                 if (count >= acceptable_params_met && i != 0) {
                     winners.push(stuff_to_filter[i - 1]);
-                    console.log(stuff_to_filter[i - 1] + " PUSHED VALUE");
-                    console.log(stuff_to_filter[i - 1] + " occurs " + count + " times");
+                    console.log(stuff_to_filter[i - 1].name + " PUSHED VALUE");
+                    console.log(stuff_to_filter[i - 1].name + " occurs " + count + " times");
                 }
                 count = 1;
 
@@ -5611,7 +5611,7 @@ var city_count = function(stuff_to_filter, acceptable_params_not_met){
         winners = "no values matching search, try lowering your number of accepted parameters";
         console.log(winners);
     }
-
+    return winners;
 }
 
 //console.log(list.length + "<------------ LIST LENGTH");
@@ -5658,17 +5658,26 @@ var actually_filter_the_cities =  function(){
     var internet_value = internet_mappings[strInternet];
 
     searchResults = filter_cost(income_value);
+    console.log(acceptable);
+    filter(data.cities, "internetSpeed", internet_value);
+    console.log(acceptable);
+    searchResults = city_count(acceptable, 3);
+    console.log(searchResults);
 
-//    $("body").append("<div id='poo'><center><tbody>");
-
-    for(var i = 0; i < searchResults.length; i++) {
+        for(var i = 0; i < searchResults.length; i++) {
         searchName = searchResults[i].name.replace(",","").replace(" ","-");
-        $("#search_results_table").append("<tr><td><a target=blank href=https://www.airbnb.com/s/" + searchName + ">"
-            +searchResults[i].name+"</td><td>"+searchResults[i].internetSpeed+"</td><td>"+searchResults[i].friendlyToForeigners+"</td></tr>");
-    };
+        $("#search_results_table").append(""
+            + "<tr><td><a target=blank href=https://www.airbnb.com/s/"
+            + searchName + ">"
+            + searchResults[i].name + "</td><td>"
+            + searchResults[i].apartmentCostDaily.USD + "</td><td>"
+            + searchResults[i].internetSpeed + "</td><td>"
+            + searchResults[i].temperature.f + "</td></tr>");
+        }
+
+
 
 //    $("body").append("</tbody></center></div>");
-
 //    filtered_results = filter_cost(income_value);
 //    $("#results").JSON.stringify(filtered_results);
 
