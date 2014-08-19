@@ -12,9 +12,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'retire_app.views.landing', name='landing'),
     url(r'^search/$', 'retire_app.views.search', name='search'),
-    url(r'^register/$', 'retire_app.views.register', name='register'),
-
-    #login
-    (r'^accounts/', include('registration.backends.default.urls')),
 
 )

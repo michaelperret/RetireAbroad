@@ -16,6 +16,7 @@
 
     <script type="text/javascript" src="static/js/script.js"></script>
     <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/sorttable.js" type="text/javascript"></script>
 
 {# the following fonts were added from google's font family'#}
 {#    adds the following fonts to your site:#}
@@ -38,7 +39,6 @@
                     <div id="title">
                         <br><br>
                         <h1>retire-abroad.com</h1>
-                        <br><br><br><br>
 
 
                         <button id = "search_button" type="button" class="button-xlarge pure-button" data-toggle="modal" data-target="#search">
@@ -49,6 +49,9 @@
                     </div>
                 </div>
             </div>
+
+        <br>
+        <p style="font-size: 10px; font-family: 'Raleway'">Powered by <a href = "http://nomadlist.io/">NomadList</a> and <a href = "http://www.numbeo.com/health-care/gmaps_rankings_country.jsp">Numbeo</a>&#0153;</p>
         </div>
 
         <br>
@@ -101,7 +104,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
-        <button type="button" class="btn btn-primary">REGISTER</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">REGISTER</button>
       </div>
     </div>
   </div>
@@ -130,7 +133,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
-        <button type="button" class="btn btn-primary">LOGIN</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">LOGIN</button>
       </div>
     </div>
   </div>
@@ -165,8 +168,8 @@
 
               <p>Climate:</p>
                  <select id="climateStuff" class="form-control" style="font-size: 30px; width:400px; height:70px; ">
-                    <option value="warm">Warm</option>
                     <option value="moderate">Moderate</option>
+                    <option value="warm">Warm</option>
                     <option value="cool">Cool</option>
                 </select>
 
@@ -174,9 +177,10 @@
 
               <p>Internet speed:</p>
                  <select id="internetStuff" class="form-control" style="font-size: 30px; width:400px; height:70px; ">
-                    <option value="critical">Mission critical</option>
+                     <option value="who_cares">Who cares?</option>
                     <option value="recreational">Recreational</option>
-                    <option value="who_cares">Who cares?</option>
+                    <option value="critical">Mission critical</option>
+
                 </select>
 
                 <br>
@@ -199,19 +203,12 @@
 
     </div>
 </div>
-
-{##}
-{#    NOTE:        this needs to be added upon activation of "actually_filter_the_cities" event}#}
-{#    <table>#}
-{#        <tr style = "display:none">#}
-{#            <td>city</td>#}
-{#            <td>avg daily rent cost</td>#}
-{#            <td>net speed</td></tr>#}
-{#        </tr>#}
-
+    <table class="sortable">
         <tbody id="search_results_table"></tbody>
     </table>
+    <div id="costDef"></div>
 
+        </center>
         </center>
 </body>
 </html>

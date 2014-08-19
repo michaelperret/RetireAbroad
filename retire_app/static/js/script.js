@@ -1,6 +1,4 @@
-/**
- * Created by gregorylevin on 8/12/14.
- */
+
 
 var data = {
    "thanks":"Thanks for your using the NomadList.io API! Currently it's just a basic JSON wrapper for the site. Build whatever you want with it, I'd love to see what you come up with. Go crazy! I'd love to hear any feedback and feature requests at hello @ this domain or tweet to me @levelsio",
@@ -10,6 +8,7 @@ var data = {
       {
          "id":"c1a83e3a7f59e0054ac112ae2e1146ec",
          "position":1,
+         "HealthcareIndex":85,
          "nomadScore":154,
          "name":"Chiang Mai",
          "country":"Thailand",
@@ -75,6 +74,7 @@ var data = {
       {
          "id":"31f842f5294c07f71c1c569d221169de",
          "position":2,
+          "HealthcareIndex":82,
          "nomadScore":119,
          "name":"Taipei",
          "country":"Taiwan",
@@ -140,6 +140,7 @@ var data = {
       {
          "id":"2cc663664b170663deef4e66ac4ba368",
          "position":3,
+         "HealthcareIndex":85,
          "nomadScore":117,
          "name":"Bangkok",
          "country":"Thailand",
@@ -205,6 +206,7 @@ var data = {
       {
          "id":"938471fae8b243472f62b9a0a745ab88",
          "position":4,
+          "HealthcareIndex":54,
          "nomadScore":110,
          "name":"Phnom Penh",
          "country":"Cambodia",
@@ -270,6 +272,7 @@ var data = {
       {
          "id":"80fe3c2380270f22ddd2aadf36de5abb",
          "position":5,
+          "HealthcareIndex":65,
          "nomadScore":103,
          "name":"Riga",
          "country":"Latvia",
@@ -329,6 +332,7 @@ var data = {
       {
          "id":"cdf8039a20459a707c53b2f1eb65b57f",
          "position":6,
+          "HealthcareIndex":35,
          "nomadScore":101,
          "name":"Ho Chi Minh City",
          "country":"Vietnam",
@@ -394,6 +398,7 @@ var data = {
       {
          "id":"927be51d28fbb6d002514173a2a30e52",
          "position":7,
+          "HealthcareIndex":59,
          "nomadScore":94,
          "name":"Kosice",
          "country":"Slovakia",
@@ -453,6 +458,7 @@ var data = {
       {
          "id":"b5caa8ea48ae736916c2dbf6c7abca0c",
          "position":8,
+          "HealthcareIndex":69,
          "nomadScore":93,
          "name":"Kuala Lumpur",
          "country":"Malaysia",
@@ -518,6 +524,7 @@ var data = {
       {
          "id":"7fbd86d0677c4868ac1ab03e3908bbc6",
          "position":9,
+          "HealthcareIndex":69,
          "nomadScore":91,
          "name":"Penang",
          "country":"Malaysia",
@@ -583,6 +590,7 @@ var data = {
       {
          "id":"43865fccdd05d97f4957df2666500110",
          "position":10,
+          "HealthcareIndex":58,
          "nomadScore":90,
          "name":"Zagreb",
          "country":"Croatia",
@@ -648,6 +656,7 @@ var data = {
       {
          "id":"6272c5634dd5c4614a2468d6f5702af8",
          "position":11,
+          "HealthcareIndex":60,
          "nomadScore":90,
          "name":"Sofia",
          "country":"Bulgaria",
@@ -713,6 +722,7 @@ var data = {
       {
          "id":"a42cd98d3ae0d0ea2490075774782981",
          "position":12,
+          "HealthcareIndex":54,
          "nomadScore":88,
          "name":"Siem Reap",
          "country":"Cambodia",
@@ -778,6 +788,7 @@ var data = {
       {
          "id":"db3d86cb0fa27bca50b36b74354ad24f",
          "position":13,
+          "HealthcareIndex":64,
          "nomadScore":85,
          "name":"Bangalore",
          "country":"India",
@@ -843,6 +854,7 @@ var data = {
       {
          "id":"56431a78f50fe68dcfc533fcdcfbe9aa",
          "position":14,
+          "HealthcareIndex":73,
          "nomadScore":82,
          "name":"Davao",
          "country":"the Philippines",
@@ -908,6 +920,7 @@ var data = {
       {
          "id":"9d7c1e1d2e2b83b3e64e8bacb263b4b4",
          "position":15,
+          "HealthcareIndex":64,
          "nomadScore":80,
          "name":"Ubud, Bali",
          "country":"Indonesia",
@@ -973,6 +986,7 @@ var data = {
       {
          "id":"cd64816c698dd7ede06e461286dc507f",
          "position":16,
+          "HealthcareIndex":46,
          "nomadScore":79,
          "name":"Cochabamba",
          "country":"Bolivia",
@@ -1038,6 +1052,7 @@ var data = {
       {
          "id":"f7ba621090ccf04b96a945b20f064b03",
          "position":17,
+          "HealthcareIndex":54,
          "nomadScore":79,
          "name":"Wroclaw",
          "country":"Poland",
@@ -1103,6 +1118,7 @@ var data = {
       {
          "id":"670114a856e139e7db64e7f4cc0fad0d",
          "position":18,
+          "HealthcareIndex":54,
          "nomadScore":78,
          "name":"Warsaw",
          "country":"Poland",
@@ -1168,6 +1184,7 @@ var data = {
       {
          "id":"3a6e3e9ffc23b005c62bbdf89e96a508",
          "position":19,
+          "HealthcareIndex":60,
          "nomadScore":78,
          "name":"Lima",
          "country":"Peru",
@@ -1233,6 +1250,7 @@ var data = {
       {
          "id":"bee2c264b8d6ae435876d3640223b504",
          "position":20,
+          "HealthcareIndex":47,
          "nomadScore":78,
          "name":"Brasov",
          "country":"Romania",
@@ -1298,6 +1316,7 @@ var data = {
       {
          "id":"d8f30c07009dd1a8363558dc6935d497",
          "position":21,
+          "HealthcareIndex":55,
          "nomadScore":75,
          "name":"Belgrade",
          "country":"Serbia",
@@ -1363,6 +1382,7 @@ var data = {
       {
          "id":"871a50fc54aadd975b2f4928d4e962d3",
          "position":22,
+          "HealthcareIndex":68,
          "nomadScore":74,
          "name":"Las Vegas",
          "country":"the United States",
@@ -1422,6 +1442,7 @@ var data = {
       {
          "id":"2f49433bbe563e3e85f64022c6abb337",
          "position":23,
+          "HealthcareIndex":50,
          "nomadScore":70,
          "name":"Budapest",
          "country":"Hungary",
@@ -1487,6 +1508,7 @@ var data = {
       {
          "id":"c524e26ff1e6365fae8c2d0b010cbb2e",
          "position":24,
+          "HealthcareIndex":56,
          "nomadScore":70,
          "name":"Ljubljana",
          "country":"Slovenia",
@@ -1546,6 +1568,7 @@ var data = {
       {
          "id":"5f38ad345c4ff1fb4d91203481eac36c",
          "position":25,
+          "HealthcareIndex":70,
          "nomadScore":69,
          "name":"Playa del Carmen",
          "country":"Mexico",
@@ -1611,6 +1634,7 @@ var data = {
       {
          "id":"b2cdcbf80d8dcc5adb6bbb86e2d9d143",
          "position":26,
+          "HealthcareIndex":47,
          "nomadScore":68,
          "name":"Timisoara",
          "country":"Romania",
@@ -1676,6 +1700,7 @@ var data = {
       {
          "id":"71e2481663ef3688f8316c703148a94b",
          "position":27,
+          "HealthcareIndex":58,
          "nomadScore":68,
          "name":"Cairo",
          "country":"Egypt",
@@ -1741,9 +1766,10 @@ var data = {
       {
          "id":"0efa09db8dd99313ee7af60f0932dd25",
          "position":28,
+          "HealthcareIndex":66,
          "nomadScore":62,
          "name":"Prague",
-         "country":"Czech Rep.",
+         "country":"Czech Republic",
          "countryCode":"CZ",
          "region":"Europe",
          "regionCode":"EU",
@@ -1806,6 +1832,7 @@ var data = {
       {
          "id":"68f2a089deb627c9169bf4c2376b5b2c",
          "position":29,
+          "HealthcareIndex":59,
          "nomadScore":61,
          "name":"Puerto Rico",
          "country":"the United States",
@@ -1865,6 +1892,7 @@ var data = {
       {
          "id":"cc494d5caec12517ee1787743bdf1969",
          "position":30,
+          "HealthcareIndex":68,
          "nomadScore":60,
          "name":"Medellin",
          "country":"Colombia",
@@ -1930,6 +1958,7 @@ var data = {
       {
          "id":"a90f703812fa2b2113ba6aefacd276f7",
          "position":31,
+          "HealthcareIndex":80,
          "nomadScore":60,
          "name":"Hong Kong",
          "country":"Hong Kong",
@@ -1995,6 +2024,7 @@ var data = {
       {
          "id":"d0d6bda3f3bb4cda6d83bf27f4084d90",
          "position":32,
+          "HealthcareIndex":72,
          "nomadScore":58,
          "name":"Montreal",
          "country":"Canada",
@@ -2060,6 +2090,7 @@ var data = {
       {
          "id":"883ab91681c3340ed49272e8f23903d7",
          "position":33,
+          "HealthcareIndex":66,
          "nomadScore":54,
          "name":"Lisbon",
          "country":"Portugal",
@@ -2119,6 +2150,7 @@ var data = {
       {
          "id":"588e4c36c6acf9fcb920a8d7230da913",
          "position":34,
+          "HealthcareIndex":75,
          "nomadScore":51,
          "name":"Buenos Aires",
          "country":"Argentina",
@@ -2184,6 +2216,7 @@ var data = {
       {
          "id":"84ec28e8a057b8040ec53f4c0a9110c0",
          "position":35,
+          "HealthcareIndex":68,
          "nomadScore":50,
          "name":"Detroit",
          "country":"the United States",
@@ -2243,6 +2276,7 @@ var data = {
       {
          "id":"c061f9f1440d965c68c83dc1bf7b16bf",
          "position":36,
+          "HealthcareIndex":73,
          "nomadScore":48,
          "name":"Manila",
          "country":"the Philippines",
@@ -2308,6 +2342,7 @@ var data = {
       {
          "id":"7c47a84905cb3681d297045d59f5005f",
          "position":37,
+          "HealthcareIndex":63,
          "nomadScore":47,
          "name":"Singapore",
          "country":"Singapore",
@@ -2373,6 +2408,7 @@ var data = {
       {
          "id":"34d567115377ca530fc4d34701bbf569",
          "position":38,
+          "HealthcareIndex":68,
          "nomadScore":46,
          "name":"Santa Monica",
          "country":"the United States",
@@ -2432,6 +2468,7 @@ var data = {
       {
          "id":"6796bfc1aec676f9f9cb13cee0a8ad8f",
          "position":39,
+          "HealthcareIndex":73,
          "nomadScore":45,
          "name":"Palawan",
          "country":"the Philippines",
@@ -2497,6 +2534,7 @@ var data = {
       {
          "id":"70b7447d9cd78bff71c987fa68869822",
          "position":40,
+          "HealthcareIndex":51,
          "nomadScore":45,
          "name":"Curitiba",
          "country":"Brazil",
@@ -2562,6 +2600,7 @@ var data = {
       {
          "id":"e9d4a0ea66e69bf1bdf2193316f58465",
          "position":41,
+          "HealthcareIndex":85,
          "nomadScore":42,
          "name":"Tokyo",
          "country":"Japan",
@@ -2627,6 +2666,7 @@ var data = {
       {
          "id":"b4254b931bed876b16d2f1d88e0601b4",
          "position":42,
+          "HealthcareIndex":51,
          "nomadScore":41,
          "name":"Recife",
          "country":"Brazil",
@@ -2692,6 +2732,7 @@ var data = {
       {
          "id":"182d95642f5edadcc6d42180e1699a07",
          "position":43,
+          "HealthcareIndex":66,
          "nomadScore":40,
          "name":"Porto",
          "country":"Portugal",
@@ -2751,6 +2792,7 @@ var data = {
       {
          "id":"e962e3b93d61543312dd5fa447c92e05",
          "position":44,
+          "HealthcareIndex":68,
          "nomadScore":34,
          "name":"Park City",
          "country":"the United States",
@@ -2810,6 +2852,7 @@ var data = {
       {
          "id":"7a6222385c7cb3c6e7ff4c3e99973de7",
          "position":45,
+          "HealthcareIndex":72,
          "nomadScore":33,
          "name":"Vancouver",
          "country":"Canada",
@@ -2875,6 +2918,7 @@ var data = {
       {
          "id":"8a954b2345a5063996f2fd0eda991366",
          "position":46,
+          "HealthcareIndex":47,
          "nomadScore":33,
          "name":"Bucharest",
          "country":"Romania",
@@ -2940,6 +2984,7 @@ var data = {
       {
          "id":"12ada79c4ba07b198013aaa70d4a5ef9",
          "position":47,
+          "HealthcareIndex":73,
          "nomadScore":33,
          "name":"Cebu",
          "country":"the Philippines",
@@ -3005,6 +3050,7 @@ var data = {
       {
          "id":"d71810c3d315ef81c19f31a1dcd40d9f",
          "position":48,
+          "HealthcareIndex":73,
          "nomadScore":30,
          "name":"Manchester",
          "country":"the United Kingdom",
@@ -3070,6 +3116,7 @@ var data = {
       {
          "id":"4c784b5c57d65e0b5e7e36cd03cc765a",
          "position":49,
+          "HealthcareIndex":68,
          "nomadScore":30,
          "name":"Orlando",
          "country":"the United States",
@@ -3129,6 +3176,7 @@ var data = {
       {
          "id":"9cfc6cfe6e39da83ab261958141803b2",
          "position":50,
+          "HealthcareIndex":68,
          "nomadScore":29,
          "name":"Boulder, CO",
          "country":"the United States",
@@ -3188,6 +3236,7 @@ var data = {
       {
          "id":"20226026b20eeab1a67c5601ad06e1b1",
          "position":51,
+          "HealthcareIndex":82,
          "nomadScore":26,
          "name":"Seoul",
          "country":"South Korea",
@@ -3253,6 +3302,7 @@ var data = {
       {
          "id":"25cb51c7e628ec424fc8d0ae871d611e",
          "position":52,
+          "HealthcareIndex":72,
          "nomadScore":25,
          "name":"Toronto",
          "country":"Canada",
@@ -3318,6 +3368,7 @@ var data = {
       {
          "id":"0b8e36bae828d4b58c7bd8326f893c8c",
          "position":53,
+          "HealthcareIndex":78,
          "nomadScore":24,
          "name":"Salzburg",
          "country":"Austria",
@@ -3377,6 +3428,7 @@ var data = {
       {
          "id":"e10e8d7a46cb83ca6665cd404e25b9e2",
          "position":54,
+          "HealthcareIndex":61,
          "nomadScore":18,
          "name":"Johannesburg",
          "country":"South Africa",
@@ -3442,6 +3494,7 @@ var data = {
       {
          "id":"269e2ffa4095c2890302c01f09871f1a",
          "position":55,
+          "HealthcareIndex":78,
          "nomadScore":17,
          "name":"Vienna",
          "country":"Austria",
@@ -3501,6 +3554,7 @@ var data = {
       {
          "id":"62734067eae2d30f82566037c8e5996c",
          "position":56,
+          "HealthcareIndex":68,
          "nomadScore":8,
          "name":"Denver, CO",
          "country":"the United States",
@@ -3560,6 +3614,7 @@ var data = {
       {
          "id":"6d30e031774e0087491625d0edae83a5",
          "position":57,
+          "HealthcareIndex":82,
          "nomadScore":6,
          "name":"Bordeaux",
          "country":"France",
@@ -3619,6 +3674,7 @@ var data = {
       {
          "id":"7febd7063b0287769a27c59dbab2a74f",
          "position":58,
+          "HealthcareIndex":74,
          "nomadScore":-1,
          "name":"Granada",
          "country":"Spain",
@@ -3678,6 +3734,7 @@ var data = {
       {
          "id":"9a46d017616d3d979d6903773dd84c89",
          "position":59,
+          "HealthcareIndex":68,
          "nomadScore":-1,
          "name":"Portland",
          "country":"the United States",
@@ -3737,6 +3794,7 @@ var data = {
       {
          "id":"b96b3cf7ba266de1cecf988e1b579986",
          "position":60,
+          "HealthcareIndex":61,
          "nomadScore":-3,
          "name":"Cape Town",
          "country":"South Africa",
@@ -3802,6 +3860,7 @@ var data = {
       {
          "id":"49f10bf52051f69ffbfc93490edb7ca4",
          "position":61,
+          "HealthcareIndex":74,
          "nomadScore":-8,
          "name":"Barcelona",
          "country":"Spain",
@@ -3861,6 +3920,7 @@ var data = {
       {
          "id":"cef749bf07f6a268dd3d00acf039accf",
          "position":62,
+          "HealthcareIndex":47,
          "nomadScore":-9,
          "name":"Dublin",
          "country":"Ireland",
@@ -3920,6 +3980,7 @@ var data = {
       {
          "id":"dbd8c9f7f8e6705baa3de8e34a733d8a",
          "position":63,
+          "HealthcareIndex":73,
          "nomadScore":-9,
          "name":"Cambridge",
          "country":"the United Kingdom",
@@ -3985,6 +4046,7 @@ var data = {
       {
          "id":"395eb2121b96cc0ebb16e46ab515374b",
          "position":64,
+          "HealthcareIndex":74,
          "nomadScore":-13,
          "name":"Auckland",
          "country":"New Zealand",
@@ -4050,6 +4112,7 @@ var data = {
       {
          "id":"e873c6c1c1196a6098f90a19ad267c3c",
          "position":65,
+          "HealthcareIndex":68,
          "nomadScore":-14,
          "name":"Salt Lake City",
          "country":"the United States",
@@ -4109,6 +4172,7 @@ var data = {
       {
          "id":"a460a3e7b691b619e8bf6c09ff8f2c2e",
          "position":66,
+          "HealthcareIndex":83,
          "nomadScore":-16,
          "name":"Copenhagen",
          "country":"Denmark",
@@ -4174,6 +4238,7 @@ var data = {
       {
          "id":"00130fbfabe7c3968c5ecdfdf4f63b8a",
          "position":67,
+          "HealthcareIndex":77,
          "nomadScore":-138,
          "name":"Stockholm",
          "country":"Sweden",
@@ -4211,8 +4276,8 @@ var data = {
             "EUR":11
          },
          "apartmentCostDaily":{
-            "SEK":"140000",
-            "USD":20445,
+            "SEK":"14000",
+            "USD":2036,
             "EUR":15182
          },
          "temperature":{
@@ -4239,6 +4304,7 @@ var data = {
       {
          "id":"fc95b5696f934975b27ed7c45af13eb1",
          "position":68,
+          "HealthcareIndex":82,
          "nomadScore":-23,
          "name":"Lyon",
          "country":"France",
@@ -4298,6 +4364,7 @@ var data = {
       {
          "id":"44518019d8242de9288465e9e4e45b1d",
          "position":69,
+          "HealthcareIndex":74,
          "nomadScore":-23,
          "name":"Wellington",
          "country":"New Zealand",
@@ -4363,6 +4430,7 @@ var data = {
       {
          "id":"379717d170ecaf49dd4bbc0aec26761c",
          "position":70,
+          "HealthcareIndex":67,
          "nomadScore":-23,
          "name":"Amsterdam",
          "country":"the Netherlands",
@@ -4422,6 +4490,7 @@ var data = {
       {
          "id":"3cf087e327ab911b7595365534a9c89f",
          "position":71,
+          "HealthcareIndex":68,
          "nomadScore":-37,
          "name":"Chicago",
          "country":"the United States",
@@ -4481,6 +4550,7 @@ var data = {
       {
          "id":"e8420f2776ea31ce3882358552acbd3b",
          "position":72,
+          "HealthcareIndex":68,
          "nomadScore":-37,
          "name":"Columbus",
          "country":"the United States",
@@ -4540,6 +4610,7 @@ var data = {
       {
          "id":"30088caf9762481108b87b185f1d10ea",
          "position":73,
+          "HealthcareIndex":68,
          "nomadScore":-49,
          "name":"Philadelphia",
          "country":"the United States",
@@ -4599,6 +4670,7 @@ var data = {
       {
          "id":"6970b43990f9cee3c93f4b74b48e2cc5",
          "position":74,
+          "HealthcareIndex":75,
          "nomadScore":-55,
          "name":"Oslo",
          "country":"Norway",
@@ -4664,6 +4736,7 @@ var data = {
       {
          "id":"b966839f3cc21200dd8eef3fc9b15d56",
          "position":75,
+          "HealthcareIndex":68,
          "nomadScore":-57,
          "name":"New York",
          "country":"the United States",
@@ -4723,6 +4796,7 @@ var data = {
       {
          "id":"d5a176da06b892e9516ee7b1b2f1de9f",
          "position":76,
+          "HealthcareIndex":77,
          "nomadScore":-58,
          "name":"Dusseldorf",
          "country":"Germany",
@@ -4782,6 +4856,7 @@ var data = {
       {
          "id":"f5c4d72e88ee0d1e0edb2d640a91d2dd",
          "position":77,
+          "HealthcareIndex":77,
          "nomadScore":-61,
          "name":"Berlin",
          "country":"Germany",
@@ -4841,6 +4916,7 @@ var data = {
       {
          "id":"eb2eb1598121d46d604b2ac3c0086c12",
          "position":78,
+          "HealthcareIndex":68,
          "nomadScore":-64,
          "name":"San Francisco",
          "country":"the United States",
@@ -4900,6 +4976,7 @@ var data = {
       {
          "id":"41182a988aac4266cbcc883d1a04c25b",
          "position":79,
+          "HealthcareIndex":68,
          "nomadScore":-70,
          "name":"Miami",
          "country":"the United States",
@@ -4959,6 +5036,7 @@ var data = {
       {
          "id":"63d4d901dee55edc0eec3b733293b9c6",
          "position":80,
+          "HealthcareIndex":73,
          "nomadScore":-83,
          "name":"London",
          "country":"the United Kingdom",
@@ -5024,6 +5102,7 @@ var data = {
       {
          "id":"2ef4d096344de73f3fcf7c2b5e093569",
          "position":81,
+          "HealthcareIndex":82,
          "nomadScore":-88,
          "name":"Paris",
          "country":"France",
@@ -5083,6 +5162,7 @@ var data = {
       {
          "id":"0b963f947d0a8f61cd6a12c4c24cdb8b",
          "position":82,
+          "HealthcareIndex":68,
          "nomadScore":-96,
          "name":"Austin",
          "country":"the United States",
@@ -5142,6 +5222,7 @@ var data = {
       {
          "id":"7ceeb4546af384b422fc559fa20ffa1a",
          "position":83,
+          "HealthcareIndex":68,
          "nomadScore":-101,
          "name":"Zurich",
          "country":"Switzerland",
@@ -5207,6 +5288,7 @@ var data = {
       {
          "id":"cd67b76cbad53e5c61093f58224ed007",
          "position":84,
+          "HealthcareIndex":68,
          "nomadScore":-102,
          "name":"Raleigh",
          "country":"the United States",
@@ -5266,6 +5348,7 @@ var data = {
       {
          "id":"ec4857c282a701cc76ce0a4c20c0eb75",
          "position":85,
+          "HealthcareIndex":68,
          "nomadScore":-102,
          "name":"Omaha",
          "country":"the United States",
@@ -5325,6 +5408,7 @@ var data = {
       {
          "id":"11152c61619ffeceee37a593ab19d1f8",
          "position":86,
+          "HealthcareIndex":72,
          "nomadScore":-104,
          "name":"Brisbane",
          "country":"Australia",
@@ -5390,6 +5474,7 @@ var data = {
       {
          "id":"3f346d8ac2c2f86f801bccd9f71a6480",
          "position":87,
+          "HealthcareIndex":77,
          "nomadScore":-105,
          "name":"Jerusalem",
          "country":"Israel",
@@ -5455,6 +5540,7 @@ var data = {
       {
          "id":"709716b18f066504d35f9a16870f924b",
          "position":88,
+          "HealthcareIndex":73,
          "nomadScore":-150,
          "name":"Edinburgh",
          "country":"the United Kingdom",
@@ -5520,6 +5606,7 @@ var data = {
    ]
 };
 
+
 //-------------------------------------------------------------------------------------------------------------
 // _______   ________   ________          ________  ________         ___  ________  ________  ________
 //|\  ___ \ |\   ___  \|\   ___ \        |\   __  \|\  _____\       |\  \|\   ____\|\   __  \|\   ___  \
@@ -5534,6 +5621,7 @@ var data = {
 
 
 var list = data.cities;
+//console.log(list);
 var filter_wifi_value = 5;
 var wifi = "wifiAvailability";
 var temp = "temperature.f";
@@ -5562,7 +5650,7 @@ var filter_cost = function(cutoff_cost){
 
 var curr_city;
 var filter = function(list, filter_identifier, filter_value){
-
+    var successful = [];
     var list_name = filter_identifier;
 //    console.log(filter_identifier)
     var list_length = list.length;
@@ -5572,47 +5660,51 @@ var filter = function(list, filter_identifier, filter_value){
 //        console.log(cost);
 
         if(curr_city[filter_identifier] >= filter_value){
-            acceptable.push(curr_city);
+            successful.push(curr_city);
 //                console.log(curr_city.name + " <----------- ADDED to list");
         }
     }
 //    console.log("WOO");
 //    console.log(acceptable);
-    return acceptable;
+    return successful;
 }
 
 <!-- should take a list of city names in the form of strings ex:['Denver', 'San Francisco', etc..] -->
 <!-- and acceptable_params_met, an int which identifies the number of filter parameters you are willing to sacrifice -->
 <!-- should return a list of the top most common name -->
-
+var names = [];
 var num_questions = 3;
-var city_count = function(stuff_to_filter, acceptable_params_not_met){
-    var acceptable_params_met = acceptable_params_not_met - num_questions;
-    acceptable_params_met = Math.abs(acceptable_params_met);
-    console.log(acceptable_params_met);
-    stuff_to_filter = stuff_to_filter.sort();
-    var current = null;
-    var count = 0;
-    for (var i = 0; i < stuff_to_filter.length; i++) {
-        if (stuff_to_filter[i] != current) {
-            current = stuff_to_filter[i].name;
-                if (count >= acceptable_params_met && i != 0) {
-                    winners.push(stuff_to_filter[i - 1]);
-                    console.log(stuff_to_filter[i - 1].name + " PUSHED VALUE");
-                    console.log(stuff_to_filter[i - 1].name + " occurs " + count + " times");
-                }
-                count = 1;
-
-        } else {
-            count++;
-        }
-    }
-    if(winners.length === 0){
-        winners = "no values matching search, try lowering your number of accepted parameters";
-        console.log(winners);
-    }
-    return winners;
-}
+//var city_count = function(stuff_to_filter, acceptable_params_not_met){
+//    var acceptable_params_met = acceptable_params_not_met - num_questions;
+//    acceptable_params_met = Math.abs(acceptable_params_met);
+//    console.log(acceptable_params_met);
+//    for(var j = 0; j < stuff_to_filter.length; j++){
+////        console.log(stuff_to_filter[j]);
+//        names.push(stuff_to_filter[j].name);
+//    }
+//    stuff_to_filter = names.sort();
+//    var current = null;
+//    var count = 0;
+//    for (var i = 0; i < stuff_to_filter.length; i++) {
+//        if (stuff_to_filter[i] != current) {
+//            current = stuff_to_filter[i].name;
+//                if (count >= 2 && i != 0) {
+//                    winners.push(stuff_to_filter[i - 1]);
+//                    console.log(stuff_to_filter[i - 1].name + " PUSHED VALUE");
+//                    console.log(stuff_to_filter[i - 1].name + " occurs " + count + " times");
+//                }
+//                count = 1;
+//
+//        } else {
+//            count++;
+//        }
+//    }
+//    if(winners.length === 0){
+//        winners = "no values matching search, try lowering your number of accepted parameters";
+//        console.log(winners);
+//    }
+//    return winners;
+//}
 
 //console.log(list.length + "<------------ LIST LENGTH");
 //filter(list, 'friendlyToForeigners', 5, true);
@@ -5623,7 +5715,7 @@ var city_count = function(stuff_to_filter, acceptable_params_not_met){
 //console.log(winners.length + "<------------ FINAL LIST LENGTH");
 
 var actually_filter_the_cities =  function(){
-    $("#search_results_table").html("");
+//    $("#search_results_table").child.innerHTML("");
     var searchName;
     var max_value_mappings = {
         1:"1263",
@@ -5657,28 +5749,35 @@ var actually_filter_the_cities =  function(){
     var strInternet = internet.options[internet.selectedIndex].value;
     var internet_value = internet_mappings[strInternet];
 
-    searchResults = filter_cost(income_value);
-    console.log(acceptable);
-    filter(data.cities, "internetSpeed", internet_value);
-    console.log(acceptable);
-    searchResults = city_count(acceptable, 3);
-    console.log(searchResults);
+    acceptable = filter_cost(income_value);
+    searchResults = filter(acceptable, "internetSpeed", internet_value);
 
-        for(var i = 0; i < searchResults.length; i++) {
-        searchName = searchResults[i].name.replace(",","").replace(" ","-");
-        $("#search_results_table").append(""
-            + "<tr><td><a target=blank href=https://www.airbnb.com/s/"
-            + searchName + ">"
-            + searchResults[i].name + "</td><td>"
-            + searchResults[i].apartmentCostDaily.USD + "</td><td>"
-            + searchResults[i].internetSpeed + "</td><td>"
-            + searchResults[i].temperature.f + "</td></tr>");
+//    console.log(acceptable);
+//    searchResults = city_count(acceptable, 3);
+    if(searchResults.length === 0){
+        alert("No results, please modify your parameters");
+    }else {
+        $("#search_results_table").append(
+                "<tr>" +
+                "<th>City <br> Name</th>" +
+                "<th>Cost<sup>*</sup> ($)</th>" +
+                "<th>Net Speed (mbps)</th>" +
+                "<th>Today's Temp (F)</th>" +
+                "<th>Healthcare Index</th></tr>"
+        );
+        for (var i = 0; i < searchResults.length; i++) {
+            searchName = searchResults[i].name.replace(",", "").replace(" ", "-");
+            $("#search_results_table").append(""
+                    + "<tr><td><a target=blank href=https://www.airbnb.com/s/"
+                    + searchName + ">"
+                    + searchResults[i].name + "</td><td>"
+                    + searchResults[i].nomadCost.USD + "</td><td>"
+                    + searchResults[i].internetSpeed + "</td><td>"
+                    + searchResults[i].temperature.f + "</td><td>"
+                    + searchResults[i].HealthcareIndex + "</td></tr>"
+            );
         }
-
-
-
-//    $("body").append("</tbody></center></div>");
-//    filtered_results = filter_cost(income_value);
-//    $("#results").JSON.stringify(filtered_results);
-
+        $("#costDef").empty();
+        $("#costDef").append("<p style='font-family: Raleway; font-size:10px;'><sup>*</sup>Based on nomadCost&#0153; a monthly average which includes monthly food, housing, and daily living expenses. Provided by nomadList&#0153; .</p>")
+    }
 };
