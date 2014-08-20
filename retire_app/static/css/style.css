@@ -8,7 +8,7 @@
 
 #title h1 {
     font-family: 'Raleway', sans-serif;
-    font-weight: normal;
+    font-weight: 100;
     font-size: 5.0vw;
     margin-left: auto;
     margin-right: auto;
@@ -25,11 +25,12 @@
         }
 
 #search_button {
-    opacity: 0.7;
-    border-width:0.5;
+    opacity: 0.8;
+    /*border-width:;*/
     border-style:solid;
     font-size: 3.0vw;
     font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 }
 
 
@@ -114,6 +115,7 @@ table {
     /*source: http://johnsardine.com/freebies/dl-html-css/simple-little-tab/*/
 
     font-family: 'Raleway', sans-serif;
+    font-weight: 100;
     font-size: 30px;
 	color:#666;
 	text-shadow: 1px 1px 0px #fff;
@@ -199,14 +201,17 @@ table tr:hover td {
 /* Modal styles */
 #login_modal, #register_modal, #search {
     font-family: 'Raleway', sans-serif;
+    font-weight: 100;
     font-size:2.0vw;
 }
 
 .picture {
     background-color: #eeeeee;
-    height: 35.5vw;
-    width: 60%;
-    background-image: url('http://31.media.tumblr.com/d851e225242e4d90baada35ba4d996f5/tumblr_n7yif13ZKl1st5lhmo1_1280.jpg');
+    height: 40.0vw;
+    width: 70%;
+    background-image: url('http://unsplash.s3.amazonaws.com/batch%208/maldives.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
     /*background-image: url('https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xfp1/t1.0-9/10429285_10152624827826894_3236733174255165163_n.jpg');*/
     display: inline-block;
 }
@@ -228,11 +233,13 @@ li {
 #login {
     opacity:0.6;
     font-family: 'Raleway', sans-serif;
+    font-weight: 100;
 
 }
 
 .option {
     font-family: 'Raleway', sans-serif;
+
     display: block;
     padding: 3px 20px;
     clear: both;
@@ -270,4 +277,14 @@ body {
 
 #results {
     display:none;
+}
+
+#about {
+    font-size:2.0vw;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    /*text-align: left;*/
+    /*margin-left:6.0vw;*/
+    /*margin-right:30.0vw;*/
+    width: 65%;
 }

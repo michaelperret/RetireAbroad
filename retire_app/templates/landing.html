@@ -6,7 +6,7 @@
     <title>RA</title>
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,400' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -16,7 +16,14 @@
 
     <script type="text/javascript" src="static/js/script.js"></script>
     <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
-    <script src="static/js/sorttable.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/floatthead/1.2.8/jquery.floatThead.min.js"></script>
+{#    <script src="static/js/sorttable.js" type="text/javascript"></script>#}
+
+
+
+
+
+
 
 {# the following fonts were added from google's font family'#}
 {#    adds the following fonts to your site:#}
@@ -37,12 +44,12 @@
             <div class="row">
                 <div class="picture">
                     <div id="title">
-                        <br><br>
+                        <br>
                         <h1>retire-abroad.com</h1>
 
-
-                        <button id = "search_button" type="button" class="button-xlarge pure-button" data-toggle="modal" data-target="#search">
-                        search!
+                        <br><br><br><br><br><br><br>
+                        <button id="search_button" type="button" class="button-xlarge pure-button" data-toggle="modal" data-target="#search">
+                        search
                         </button>
 
                     </div>
@@ -64,8 +71,14 @@
             <button class="button-xlarge pure-button" data-toggle="modal" data-target="#login_modal">
                 <span class="glyphicon glyphicon-hand-up"><br>login</span>
                 </button>
+            <button class="button-xlarge pure-button" onclick="move_to_about()" id="#aboutButton">
+                <span class="glyphicon glyphicon-edit"><br>about</span>
+                </button>
+
 
         </div>
+
+
 
         <center>
 
@@ -177,9 +190,9 @@
 
               <p>Internet speed:</p>
                  <select id="internetStuff" class="form-control" style="font-size: 30px; width:400px; height:70px; ">
-                     <option value="who_cares">Who cares?</option>
-                    <option value="recreational">Recreational</option>
-                    <option value="critical">Mission critical</option>
+                     <option value="who_cares">Whatever</option>
+                    <option value="recreational">Medium</option>
+                    <option value="critical">Fast</option>
 
                 </select>
 
@@ -203,10 +216,34 @@
 
     </div>
 </div>
-    <table class="sortable">
-        <tbody id="search_results_table"></tbody>
-    </table>
-    <div id="costDef"></div>
+    <div id="citiesTable">
+        <table class="sortable">
+            <thead>
+                <tr style='font-size:1.3vw;'>
+                <th>City Name</th>
+                <th>Cost<sup>*</sup> ($)</th>
+                <th>Net Speed (mbps)</th>
+                <th>Today's Temp (F)</th>
+                <th>Healthcare Index</th></tr>
+            </thead>
+            <tbody id="search_results_table">
+
+            </tbody>
+        </table>
+    </div>
+
+<br><br><br>
+<br><br><br><br><br><br>
+    <div style="text-align: center" id="about">
+        <h1>About</h1>
+        <p>Finally, a place to explore your retirement options.<br>
+        <p>No more months of searching to find a cost-effective, suitable location.</p>
+        <p>Retire-abroad helps you effortlessly explore reasonable places to retire, in seconds.</p>
+        <p>We aggregate most important factors for retirement and does an in depth search of possible places, one of which could be your next home.</p>
+
+    </div>
+<br><br><br><br><br>
+            <div id="costDef"></div>
 
         </center>
         </center>

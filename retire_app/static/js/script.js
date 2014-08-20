@@ -5618,8 +5618,10 @@ var data = {
 //                                                                          \|_________|
 //
 //------------------------------------------------------------------------------------------------------------
+$(document).on('ready', function(){
 
-
+$(".sortable").hide();
+});
 var list = data.cities;
 //console.log(list);
 var filter_wifi_value = 5;
@@ -5674,6 +5676,7 @@ var filter = function(list, filter_identifier, filter_value){
 <!-- should return a list of the top most common name -->
 var names = [];
 var num_questions = 3;
+
 //var city_count = function(stuff_to_filter, acceptable_params_not_met){
 //    var acceptable_params_met = acceptable_params_not_met - num_questions;
 //    acceptable_params_met = Math.abs(acceptable_params_met);
@@ -5713,9 +5716,14 @@ var num_questions = 3;
 //filter(list, 'climate', 'hot',true);
 //city_count(acceptable, 0);
 //console.log(winners.length + "<------------ FINAL LIST LENGTH");
+var move_to_about = function(){
+    window.location.hash = '#about';
+};
+
 
 var actually_filter_the_cities =  function(){
 //    $("#search_results_table").child.innerHTML("");
+
     var searchName;
     var max_value_mappings = {
         1:"1263",
@@ -5755,29 +5763,37 @@ var actually_filter_the_cities =  function(){
 //    console.log(acceptable);
 //    searchResults = city_count(acceptable, 3);
     if(searchResults.length === 0){
-        alert("No results, please modify your parameters");
-    }else {
-        $("#search_results_table").append(
-                "<tr>" +
-                "<th>City <br> Name</th>" +
-                "<th>Cost<sup>*</sup> ($)</th>" +
-                "<th>Net Speed (mbps)</th>" +
-                "<th>Today's Temp (F)</th>" +
-                "<th>Healthcare Index</th></tr>"
-        );
+        alert("No results, please modify your search");
+    } else {
+        var sortable = $(".sortable");
+//        sortable.empty();
+        sortable.show();
+
+
         for (var i = 0; i < searchResults.length; i++) {
             searchName = searchResults[i].name.replace(",", "").replace(" ", "-");
             $("#search_results_table").append(""
                     + "<tr><td><a target=blank href=https://www.airbnb.com/s/"
+
                     + searchName + ">"
-                    + searchResults[i].name + "</td><td>"
+                    + searchResults[i].name +"</td><td>"
+
+
+
                     + searchResults[i].nomadCost.USD + "</td><td>"
                     + searchResults[i].internetSpeed + "</td><td>"
                     + searchResults[i].temperature.f + "</td><td>"
                     + searchResults[i].HealthcareIndex + "</td></tr>"
             );
         }
+        sortable.floatThead({
+	useAbsolutePositioning: false
+	// absolutePositioning is better for
+	// highly dynamic sites
+	// (which this is not)
+});
         $("#costDef").empty();
-        $("#costDef").append("<p style='font-family: Raleway; font-size:10px;'><sup>*</sup>Based on nomadCost&#0153; a monthly average which includes monthly food, housing, and daily living expenses. Provided by nomadList&#0153; .</p>")
+        $("#costDef").append("<p style='font-family: Raleway; font-size:10px;'><sup>*</sup>Based on nomadCost&#0153;<br> a monthly average which includes monthly food, housing, and daily living expenses. <br>Provided by nomadList&#0153; .</p>");
+        window.location.hash = '#citiesTable';
     }
 };
