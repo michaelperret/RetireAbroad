@@ -1,5 +1,5 @@
 
-
+//
 var data = {
    "thanks":"Thanks for your using the NomadList.io API! Currently it's just a basic JSON wrapper for the site. Build whatever you want with it, I'd love to see what you come up with. Go crazy! I'd love to hear any feedback and feature requests at hello @ this domain or tweet to me @levelsio",
    "please":"Please link back to the site and add a text\/logo that says Powered by NomadList.",
