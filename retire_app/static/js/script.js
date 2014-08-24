@@ -5623,30 +5623,18 @@ $(document).on('ready', function(){
 $(".sortable").hide();
 });
 var list = data.cities;
-//console.log(list);
-var filter_wifi_value = 5;
-var wifi = "wifiAvailability";
-var temp = "temperature.f";
-var winners = [];
 var acceptable = [];
 
 
 var filter_cost = function(cutoff_cost){
     cost_list = data.cities;
-//    console.log(cost_list);
     list_length = cost_list.length;
     for(var i = 0; i < list_length; i++){
         curr_city = cost_list[i];
-//        console.log(curr_city);
-//        console.log(curr_city.name);
-//        console.log(curr_city.nomadCost.USD)
         if(curr_city.nomadCost.USD <= cutoff_cost){
             acceptable.push(curr_city);
-//                console.log(curr_city.name + " <----------- ADDED to list");
         }
     }
-//    console.log("WOO");
-//    console.log(acceptable);
     return acceptable;
 }
 
@@ -5666,64 +5654,16 @@ var filter = function(list, filter_identifier, filter_value){
 //                console.log(curr_city.name + " <----------- ADDED to list");
         }
     }
-//    console.log("WOO");
-//    console.log(acceptable);
     return successful;
 }
 
-<!-- should take a list of city names in the form of strings ex:['Denver', 'San Francisco', etc..] -->
-<!-- and acceptable_params_met, an int which identifies the number of filter parameters you are willing to sacrifice -->
-<!-- should return a list of the top most common name -->
-var names = [];
-var num_questions = 3;
 
-//var city_count = function(stuff_to_filter, acceptable_params_not_met){
-//    var acceptable_params_met = acceptable_params_not_met - num_questions;
-//    acceptable_params_met = Math.abs(acceptable_params_met);
-//    console.log(acceptable_params_met);
-//    for(var j = 0; j < stuff_to_filter.length; j++){
-////        console.log(stuff_to_filter[j]);
-//        names.push(stuff_to_filter[j].name);
-//    }
-//    stuff_to_filter = names.sort();
-//    var current = null;
-//    var count = 0;
-//    for (var i = 0; i < stuff_to_filter.length; i++) {
-//        if (stuff_to_filter[i] != current) {
-//            current = stuff_to_filter[i].name;
-//                if (count >= 2 && i != 0) {
-//                    winners.push(stuff_to_filter[i - 1]);
-//                    console.log(stuff_to_filter[i - 1].name + " PUSHED VALUE");
-//                    console.log(stuff_to_filter[i - 1].name + " occurs " + count + " times");
-//                }
-//                count = 1;
-//
-//        } else {
-//            count++;
-//        }
-//    }
-//    if(winners.length === 0){
-//        winners = "no values matching search, try lowering your number of accepted parameters";
-//        console.log(winners);
-//    }
-//    return winners;
-//}
-
-//console.log(list.length + "<------------ LIST LENGTH");
-//filter(list, 'friendlyToForeigners', 5, true);
-//filter(list, 'internetSpeed', 50, true);
-//filter(list, 'safetyLevel', 4, true);
-//filter(list, 'climate', 'hot',true);
-//city_count(acceptable, 0);
-//console.log(winners.length + "<------------ FINAL LIST LENGTH");
 var move_to_about = function(){
     window.location.hash = '#about';
 };
 
 
 var actually_filter_the_cities =  function(){
-//    $("#search_results_table").child.innerHTML("");
-
     var searchName;
     var max_value_mappings = {
         1:"1263",
@@ -5760,26 +5700,19 @@ var actually_filter_the_cities =  function(){
     acceptable = filter_cost(income_value);
     searchResults = filter(acceptable, "internetSpeed", internet_value);
 
-//    console.log(acceptable);
-//    searchResults = city_count(acceptable, 3);
+
     if(searchResults.length === 0){
         alert("No results, please modify your search");
     } else {
         var sortable = $(".sortable");
-//        sortable.empty();
         sortable.show();
-
-
         for (var i = 0; i < searchResults.length; i++) {
             searchName = searchResults[i].name.replace(",", "").replace(" ", "-");
             $("#search_results_table").append(""
                     + "<tr><td><a target=blank href=https://www.airbnb.com/s/"
 
                     + searchName + ">"
-                    + searchResults[i].name +"</td><td>"
-
-
-
+                    + searchResults[i].name + ", " + searchResults[i].country +"</td><td>"
                     + searchResults[i].nomadCost.USD + "</td><td>"
                     + searchResults[i].internetSpeed + "</td><td>"
                     + searchResults[i].temperature.f + "</td><td>"
