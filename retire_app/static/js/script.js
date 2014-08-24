@@ -5788,9 +5788,6 @@ var actually_filter_the_cities =  function(){
         }
         sortable.floatThead({
 	useAbsolutePositioning: false
-	// absolutePositioning is better for
-	// highly dynamic sites
-	// (which this is not)
 });
         $("#costDef").empty();
         $("#costDef").append("<p style='font-family: Raleway; font-size:10px;'><sup>*</sup>Based on nomadCost&#0153;<br> a monthly average which includes monthly food, housing, and daily living expenses. <br>Provided by nomadList&#0153; .</p>");
